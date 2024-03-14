@@ -1,0 +1,15 @@
+{
+    "name": "hh/test",
+    "autoload": {
+        "psr-4": {
+            "LoginOpdracht\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Emily-Broeksema",
+            "email": "9017781@student.zadkine.nl"
+        }
+    ],
+    "require": {}
+}
