@@ -11,5 +11,7 @@
             "email": "9017781@student.zadkine.nl"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    }
 }

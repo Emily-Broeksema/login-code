@@ -2,9 +2,8 @@
    
     namespace LoginOpdracht\classes;
 
-    class User{
+    class User extends Database{
 
-        // Eigenschappen 
         public $username;
         public $email;
         private $password;
@@ -58,18 +57,21 @@
                 array_push($errors, "Invalid username");
             } else if (empty($this->password)){
                 array_push($errors, "Invalid password");
+            } else if (strlen($this->username) < 3 && strlen($this->username) > 50)
+            {
+                array_push($errors, "Username moet kleiner dan 3 en groter dan 50 tekens zijn.");
             }
 
             return $errors;
 
             // Test username > 3 tekens en <br 50 tekens
-            $len_username = strlen($username);
-            echo $len_username;
-            echo "</br>";
-            if ($len_username > 3 && $len_username < 50)
-            {
-                echo "ok";
-            }
+            //$len_username = strlen($username);
+           // echo $len_username;
+            //echo "</br>";
+            //if ($len_username > 3 && $len_username < 50)
+            //{
+            //    echo "ok";
+            //}
                         
         }
 
@@ -135,7 +137,7 @@
 
             // destroy the session
             session_destroy();
-            header('location: index.php');
+        
         }
 
 

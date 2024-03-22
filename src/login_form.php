@@ -4,6 +4,8 @@
 
 	use LoginOpdracht\classes\User;
 
+// by conn $this-> voor zetten
+
 
 
 	// Is de login button aangeklikt?

@@ -1,5 +1,8 @@
 <?php
 
+	require_once "../vendor/autoload.php";
+
+	use LoginOpdracht\classes\User;
 
 // Is de register button aangeklikt?
 if(isset($_POST['register-btn'])){
@@ -15,6 +18,15 @@ if(isset($_POST['register-btn'])){
 
 	// Validatie gegevens
 	// Hoe???
+	$errors = $user->ValidateUser();
+
+		if($cnt = 0)
+		{
+			$row = $query->fetch();
+
+			session_start();
+			$_SESSION['user'] = $row['username'];
+		}
 	
 
 	if(count($errors) == 0){
