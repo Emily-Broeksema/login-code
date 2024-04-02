@@ -2,10 +2,11 @@
    
     namespace LoginOpdracht\classes;
 
+    use PDO;
+
     class User extends Database{
 
         public $username;
-        public $email;
         private $password;
         
         function SetPassword($password){
@@ -18,7 +19,6 @@
         public function ShowUser() {
             echo "<br>Username: $this->username<br>";
             echo "<br>Password: $this->password<br>";
-            echo "<br>Email: $this->email<br>";
         }
 
         public function RegisterUser(){
